@@ -11,7 +11,7 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-let main = document.querySelector('main');
+
 
 let quotes = [
   {
@@ -150,13 +150,15 @@ let quotes = [
     author: 'Dan Millman',
     quote: 'There are no oridinary moments.',
     citation: 'Way of the Peaceful Warrior',
-    year: '1980'
+    year: '1980',
+    tag: 'spirituality'
   },
   {
     author: 'Lao Tzu',
     quote: 'Those who know do not speak. Those who speak do not know.',
     citation: 'Tao Te Ching',
-    year: '4th century BC'
+    year: '4th century BC',
+    tag: 'spirituality'
   }
 ];
 
@@ -165,8 +167,7 @@ let quotes = [
 ***/
 
 function getRandomQuote (arrLength) {
-  let index = Math.floor(Math.random() * arrLength);
-  return quotes[index];
+  return quotes[Math.floor(Math.random() * arrLength)];
 }
 
 
@@ -177,6 +178,8 @@ function getRandomQuote (arrLength) {
 ***/
 
 function printQuote() {
+
+  let main = document.querySelector('main');
 
   // Random hexadecimal color generator, copied from https://css-tricks.com/snippets/javascript/random-hex-color/
   const setBg = () => {
