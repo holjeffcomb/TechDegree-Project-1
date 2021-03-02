@@ -11,8 +11,6 @@ project 1 - A Random Quote Generator
  * `quotes` array 
 ***/
 
-
-
 let quotes = [
   {
     source: 'Stephen Hawking',
@@ -170,9 +168,6 @@ function getRandomQuote (arrLength) {
   return quotes[Math.floor(Math.random() * arrLength)];
 }
 
-
-
-
 /***
  * `printQuote` function
 ***/
@@ -190,9 +185,7 @@ function printQuote() {
 
   let quote = getRandomQuote(quotes.length);
 
-  let html = '';
-
-  html = `
+  let html = `
     <div class="container">
       <div id="quote-box" class="quote-box">
         <p class="quote">${quote.quote}</p>
@@ -225,8 +218,6 @@ setInterval(printQuote, 10000);
 
 // initiate first quote
 printQuote();
-
-
 
 /***
  * click event listener for the print quote button
