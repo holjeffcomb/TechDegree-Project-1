@@ -115,6 +115,19 @@ h1 {
   font-style: normal;
 }
 
+.tag {
+  font-size: 0.6rem;
+}
+
+.tag:before {
+  content: " (tag: ";
+  font-style: normal;
+}
+
+.tag:after {
+  content: ")"
+}
+
 @media (min-width: 768px) {
   body {
     padding: 25px;

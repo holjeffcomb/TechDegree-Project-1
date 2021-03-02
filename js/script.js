@@ -110,7 +110,8 @@ let quotes = [
   },
   {
     author: 'Rumi', 
-    quote: 'Stop acting so small. You are the universe in ecstatic motion.'
+    quote: 'Stop acting so small. You are the universe in ecstatic motion.',
+    tag: 'inspiration'
   },
   {
     author: 'Eminem',
@@ -192,8 +193,7 @@ function printQuote() {
     <div class="container">
       <div id="quote-box" class="quote-box">
         <p class="quote">${quote.quote}</p>
-        <p class="source">${quote.author}
-  `;
+        <p class="source">${quote.author}`;
 
   if (quote.citation){
     html += `<span class="citation">${quote.citation}</span>`;
@@ -201,6 +201,10 @@ function printQuote() {
 
   if (quote.year){
     html += `<span class="year">${quote.year}</span>`;
+  }
+
+  if (quote.tag){
+    html += `<span class="tag">${quote.tag}</span>`
   }
 
   html += `             
@@ -213,9 +217,10 @@ function printQuote() {
 
 }
 
-
-
+// set interval to change quote every 10 seconds
 setInterval(printQuote, 10000);
+
+// initiate first quote
 printQuote();
 
 
