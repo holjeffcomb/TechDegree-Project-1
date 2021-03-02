@@ -164,8 +164,8 @@ let quotes = [
  * `getRandomQuote` function
 ***/
 
-function getRandomQuote (arrLength) {
-  return quotes[Math.floor(Math.random() * arrLength)];
+function getRandomQuote () {
+  return quotes[Math.floor(Math.random() * quotes.length)];
 }
 
 /***
@@ -183,7 +183,7 @@ function printQuote() {
   }
   setBg();
 
-  let quote = getRandomQuote(quotes.length);
+  let quote = getRandomQuote();
 
   let html = `
     <div class="container">
